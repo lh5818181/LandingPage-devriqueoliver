@@ -1,9 +1,14 @@
+// src/components/value/ValuePropsSection.styles.ts
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.colors.gray};
-  text-align: center;
+  padding: 4rem 2rem;
+`;
+
+export const Wrapper = styled.div`
+  max-width: ${({ theme }) => theme.breakpoints.desktop};
+  margin: 0 auto;
 `;
 
 export const SectionTitle = styled.h2`
@@ -15,12 +20,15 @@ export const SectionTitle = styled.h2`
 export const PropsGrid = styled.div`
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 `;
 
 export const PropCard = styled.div`
+  grid-column: span 3;
   background: ${({ theme }) => theme.colors.background};
   padding: 1.5rem;
   border-radius: 12px;

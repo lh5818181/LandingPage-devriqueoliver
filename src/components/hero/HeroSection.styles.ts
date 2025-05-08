@@ -1,16 +1,5 @@
-import type { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styled, { type FastOmit, type Interpolation } from 'styled-components';
-
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    colors: {
-      [x: string]: Interpolation<FastOmit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, never>>;
-      primary: string;
-      white: string;
-      background: string;
-    };
-  }
-}
+// src/components/hero/HeroSection.styles.ts
+import styled from 'styled-components';
 
 export const Container = styled.section`
   width: 100%;
@@ -28,6 +17,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h1`
+  font-family: 'League Spartan', sans-serif;
   font-size: 2.5rem;
   color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 1.5rem;
@@ -46,8 +36,8 @@ export const CTAButton = styled.a`
   padding: 1rem 2rem;
   font-weight: bold;
   border-radius: 8px;
-  text-decoration: none;
   transition: all 0.3s;
+  display: inline-block;
 
   &:hover {
     background-color: #00a6cc;

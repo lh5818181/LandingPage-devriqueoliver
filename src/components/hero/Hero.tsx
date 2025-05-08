@@ -1,3 +1,5 @@
+// src/components/hero/Hero.tsx
+import React from 'react';
 import { Container, Content, Title, Subtitle, CTAButton } from './HeroSection.styles';
 
 export function HeroSection() {
@@ -8,7 +10,7 @@ export function HeroSection() {
         <Subtitle>
           Crie sua presença digital com um site estratégico, responsivo e com a sua cara.
         </Subtitle>
-        <CTAButton href="#contato">Quero meu site</CTAButton>
+        <CTAButton href="#vantagens">Quero meu site</CTAButton>
       </Content>
     </Container>
   );

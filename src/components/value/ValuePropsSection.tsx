@@ -1,15 +1,18 @@
+
 import {
-    Section,
-    SectionTitle,
-    PropsGrid,
-    PropCard,
-    PropIcon,
-    PropText,
-  } from './ValuePropsSection.styles';
-  
-  export function ValuePropsSection() {
-    return (
-      <Section id="vantagens">
+  Section,
+  Wrapper,
+  SectionTitle,
+  PropsGrid,
+  PropCard,
+  PropIcon,
+  PropText,
+} from './ValuePropsSection.styles';
+
+export function ValuePropsSection() {
+  return (
+    <Section id="vantagens">
+      <Wrapper>
         <SectionTitle>O que você ganha comigo</SectionTitle>
         <PropsGrid>
           <PropCard>
@@ -29,7 +32,7 @@ import {
             <PropText>Fácil de Gerenciar</PropText>
           </PropCard>
         </PropsGrid>
-      </Section>
-    );
-  }
-  
+      </Wrapper>
+    </Section>
+  );
+}

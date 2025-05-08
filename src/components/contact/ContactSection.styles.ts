@@ -1,8 +1,9 @@
+// src/components/contact/ContactSection.styles.ts
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.colors.gray};
+  padding: 4rem 2rem;
   text-align: center;
 `;
 
@@ -17,8 +18,7 @@ export const ContactText = styled.p`
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: 2rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem;
   line-height: 1.5;
 `;
 
@@ -29,8 +29,8 @@ export const ContactButton = styled.a`
   font-size: 1rem;
   font-weight: bold;
   border-radius: 8px;
-  text-decoration: none;
   transition: all 0.3s;
+  display: inline-block;
 
   &:hover {
     background-color: #00a6cc;
@@ -39,8 +39,8 @@ export const ContactButton = styled.a`
 `;
 
 export const Footer = styled.footer`
-  padding: 1.5rem 2rem;
   background-color: ${({ theme }) => theme.colors.background};
+  padding: 1.5rem 2rem;
   text-align: center;
 `;
 
