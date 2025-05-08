@@ -1,17 +1,30 @@
-// src/components/hero/Hero.tsx
 import React from 'react';
-import { Container, Content, Title, Subtitle, CTAButton } from './HeroSection.styles';
+import {
+  HeroContainer,
+  HeroContent,
+  HeroTitle,
+  HeroSubtitle,
+  Tabs,
+  TabItem,
+  CTAButton,
+} from './Hero.styles';
 
 export function HeroSection() {
   return (
-    <Container>
-      <Content>
-        <Title>Seu site não pode ser só bonito. Ele precisa vender.</Title>
-        <Subtitle>
-          Crie sua presença digital com um site estratégico, responsivo e com a sua cara.
-        </Subtitle>
-        <CTAButton href="#vantagens">Quero meu site</CTAButton>
-      </Content>
-    </Container>
+    <HeroContainer id="home">
+      <HeroContent>
+        <HeroTitle>Seu site não pode ser só bonito. Ele precisa vender.</HeroTitle>
+        <HeroSubtitle>
+          Transformo ideias em experiências digitais com estratégia, estética e
+          performance.
+        </HeroSubtitle>
+        <Tabs>
+          <TabItem active>Serviços</TabItem>
+          <TabItem>Portfólio</TabItem>
+          <TabItem>Como Funciona</TabItem>
+        </Tabs>
+        <CTAButton href="#servicos">Quero meu site →</CTAButton>
+      </HeroContent>
+    </HeroContainer>
   );
 }

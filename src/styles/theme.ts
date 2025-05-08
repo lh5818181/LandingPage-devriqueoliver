@@ -1,8 +1,14 @@
+
+import type { DetailedHTMLProps, HTMLAttributes } from 'react';
 import 'styled-components';
+import type { Interpolation, FastOmit } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
+      primaryDark: Interpolation<FastOmit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, never>>;
+      grayLight: Interpolation<FastOmit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>>;
+      accent: string;
       background: string;
       primary: string;
       gray: string;
